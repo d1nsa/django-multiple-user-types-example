@@ -1,17 +1,22 @@
-{% extends 'base.html' %}
+{% extends 'base_home.html' %}
 
 {% load crispy_forms_tags crispy_forms_filters %}
 
 {% block content %}
-  <nav aria-label="breadcrumb">
+<!--   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Quizzes</a></li>
       <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change' quiz.pk %}">{{ quiz.name }}</a></li>
       <li class="breadcrumb-item active" aria-current="page">{{ question.text }}</li>
     </ol>
-  </nav>
-  <h2 class="mb-3">{{ question.txt }}</h2>
-  <form method="post" novalidate>
+  </nav> -->
+<!--   <h2 class="mb-3">{{ question.txt }}</h2>
+ -->  
+  <div class="wrapper">
+      <div class="content">
+        <div class="container">
+
+ <form method="post" novalidate style="height: 500px; padding: 40px 0 400px 0; margin-bottom: 400px;">
     {% csrf_token %}
     {{ formset.management_form }}
     {{ form|crispy }}
@@ -30,7 +35,7 @@
         </div>
       </div>
       {% for error in formset.non_form_errors %}
-        <div class="card-body bg-danger border-danger text-white py-2">{{ error }}</div>
+        <div class="card-body bg-danger border-danger text-black py-2">{{ error }}</div>
       {% endfor %}
       <div class="list-group list-group-flush list-group-formset">
         {% for form in formset %}
@@ -61,4 +66,9 @@
     <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-secondary" role="button">Nevermind</a>
     <a href="{% url 'teachers:question_delete' quiz.pk question.pk %}" class="btn btn-danger float-right">Delete</a>
   </form>
+
+</div>
+</div>
+</div>
+
 {% endblock %}

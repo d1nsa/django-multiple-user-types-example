@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">My Quizzes</li>
-    </ol>
-  </nav>
+
+
   <h2 class="mb-3">My Quizzes</h2>
   <a href="{% url 'teachers:quiz_add' %}" class="btn btn-primary mb-3" role="button">Add quiz</a>
   <div class="card">
@@ -38,4 +35,6 @@
       </tbody>
     </table>
   </div>
+
+
 {% endblock %}

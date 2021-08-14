@@ -1,18 +1,132 @@
-{% extends 'base.html' %}
+{% extends 'base_home.html' %}
+
+{% load staticfiles %}
 
 {% block content %}
-  <h2>Welcome to the Django Schools! <span class="icon-emo-happy"></span></h2>
-  <p class="lead">
-    If you already have an account, go ahead and <a href="{% url 'login' %}">log in</a>. If you are new to Django Schools, get started
-    by creating a <a href="{% url 'student_signup' %}">student account</a> or a <a href="{% url 'teacher_signup' %}">teacher account</a>.
-  </p>
-  <hr>
-  <h3>What's this about?</h3>
-  <p>
-    This Django application is an example I created to illustrate a <a href="https://simpleisbetterthancomplex.com/tutorial/2018/01/18/how-to-implement-multiple-user-types-with-django.html">blog post about how to implement multiple user types</a>.
-    In this application, users can sign up as a student or a teacher. Teachers can create quizzes and students can answer quizzes
-    based on their interests.
-  </p>
-  <p>Want to run this code locally? <a href="https://github.com/sibtc/django-multiple-user-types-example/blob/master/README.md">Read detailed instructions on how to run this project</a>.</p>
-  <p class="mb-0">Vitor Freitas<br><a href="https://twitter.com/vitorfs/">@vitorfs</a></p>
+
+    <div class="wrapper">
+
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square4"></div>
+      <div class="squares square5"></div>
+      <div class="squares square6"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        <div class="content-center brand">
+          <h1 class="h1-seo">OES•</h1>
+          <h3>Come and build a greater future with us</h3>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="section section-basic" id="basic-elements">
+        <img src="#" class="path">
+      </div>
+      <div class="section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-6">
+            <div class="row justify-content-between align-items-center">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block" src="{% static 'img/denys.jpg' %}" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Big City Life, United States</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="{% static 'img/fabien-bazanegue.jpg' %}" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Somewhere Beyond, United States</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="{% static 'img/mark-finn.jpg' %}" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Stocks, United States</h5>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <i class="tim-icons icon-minimal-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <i class="tim-icons icon-minimal-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <h1 class="profile-title text-left">Projects</h1>
+            <p class="profile-description text-left">An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</p>
+            <div class="btn-wrapper pt-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+          <div class="section section-download" id="#download-section" data-background-color="black">
+        <img src="{% static 'img/path1.png" class="path">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="text-center col-md-12 col-lg-8">
+              <h2 class="title">Do you love this Bootstrap 4 Design System?</h2>
+              <h4 class="description">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the design system in HTML format. Start a new project or give an old Bootstrap project a new look!</h4>
+            </div>
+            <div class="text-center col-md-12 col-lg-8">
+              <a href="#" class="btn btn-primary btn-round btn-lg" role="button">
+                Download HTML
+              </a>
+              <!-- <a href="https://www.invisionapp.com/now" target="_blank" class="btn btn-primary btn-lg btn-simple btn-round" role="button">
+            Download PSD/Sketch
+          </a> -->
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <!-- <div class="row text-center mt-5">
+        <div class="col-md-8 ml-auto mr-auto">
+          <h2>Want more?</h2>
+          <h5 class="description">We've just launched <a href="http://demos.creative-tim.com/black-kit-pro/presentation.html" target="_blank">BLK• Design System PRO</a>. It has a huge number of components, sections and example pages. Start Your Development With A Badass Bootstrap 4 Design System.</h4>
+        </div>
+        <div class="col-md-12">
+          <a href="http://demos.creative-tim.com/black-kit-pro/presentation.html" class="btn btn-neutral btn-round btn-lg" target="_blank">
+            <i class="tim-icons icon-cloud-upload-94"></i> Upgrade to PRO
+          </a>
+        </div>
+      </div> -->
+          <br>
+          <br>
+          <div class="row row-grid align-items-center my-md">
+            <div class="col-lg-6">
+              <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
+              <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+            </div>
+            <div class="col-lg-6 text-lg-center btn-wrapper">
+              <a id="twitter" class="btn btn-icon btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Tweet!">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a id="facebook" class="btn btn-icon btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Share!">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a target="_blank" href="https://github.com/creativetimofficial" class="btn btn-icon btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 {% endblock %}
