@@ -3,14 +3,23 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div class="card">
   <div class="progress mb-3">
     <div class="progress-bar" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress }}%"></div>
   </div>
   <h2 class="mb-3">{{ quiz.name }}</h2>
-  <p class="lead">{{ question.text }}</p>
+
+  <div class="card">
+    <div class="card-header">
+    <div class="row">
+  <p class="">{{ question.text }}</p>
+</div>
   <form method="post" novalidate>
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form }}
     <button type="submit" class="btn btn-primary">Next →</button>
   </form>
+</div>
+</div>  
+</div>
 {% endblock %}

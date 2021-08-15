@@ -9,6 +9,9 @@
       <li class="breadcrumb-item active" aria-current="page">{{ quiz.name }}</li>
     </ol>
   </nav> -->
+    <div class="card" style="padding: 25px;">
+
+
   <h2 class="mb-3">
     {{ quiz.name }}
     <a href="{% url 'teachers:quiz_results' quiz.pk %}" class="btn btn-primary float-right">View results</a>
@@ -35,9 +38,9 @@
         </div>
       </div>
     </div>
-    <div class="list-group list-group-flush list-group-formset">
+    <div class="list-group list-group-flush list-group-formset" >
       {% for question in questions %}
-        <div class="list-group-item">
+        <div class="list-group-item" style="background: #1f2251; border: 0px;">
           <div class="row">
             <div class="col-10">
               <a href="{% url 'teachers:question_change' quiz.pk question.pk %}">{{ question.text }}</a>
@@ -57,4 +60,5 @@
       <a href="{% url 'teachers:question_add' quiz.pk %}" class="btn btn-primary btn-sm">Add question</a>
     </div>
   </div>
+</div>
 {% endblock %}

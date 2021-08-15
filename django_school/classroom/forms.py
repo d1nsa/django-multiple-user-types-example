@@ -71,13 +71,14 @@ class BaseAnswerInlineFormSet(forms.BaseInlineFormSet):
 class TakeQuizForm(forms.ModelForm):
     answer = forms.ModelChoiceField(
         queryset=Answer.objects.none(),
-        widget=forms.RadioSelect(),
+        widget=forms.RadioSelect(attrs={}),
         required=True,
         empty_label=None)
 
     class Meta:
         model = StudentAnswer
         fields = ('answer', )
+
 
     def __init__(self, *args, **kwargs):
         question = kwargs.pop('question')
