@@ -5,7 +5,7 @@
 {% block content %}
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Quizzes</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Exams</a></li>
       <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change' quiz.pk %}">{{ quiz.name }}</a></li>
       <li class="breadcrumb-item active" aria-current="page">Results</li>
     </ol>
@@ -14,7 +14,7 @@
 
   <div class="card">
     <div class="card-header">
-      <strong>Taken Quizzes</strong>
+      <strong>Taken Exams</strong>
       <span class="badge badge-pill badge-primary float-right">Average Score: {{ quiz_score.average_score|default_if_none:0.0 }}</span>
     </div>
     <table class="table mb-0">

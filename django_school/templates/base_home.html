@@ -79,15 +79,15 @@
                   <i class="fa fa-cogs d-lg-none d-xl-none"></i> Getting started
                 </a>
                 <div class="dropdown-menu dropdown-with-icons">
-                  <a href="#" class="dropdown-item">
+                  <a href="/static/pages/about.html" class="dropdown-item">
                     <i class="tim-icons icon-paper"></i> About Us
                   </a>
-                  <a href="examples/landing-page.html" class="dropdown-item">
+                  <a href="/static/pages/contact.html" class="dropdown-item">
                     <i class="tim-icons icon-image-02"></i>Contact Us
                   </a>
-                  <a href="examples/profile-page.html" class="dropdown-item">
-                    <i class="tim-icons icon-single-02"></i>Profile Page
-                  </a>
+                  <!-- <a href="examples/profile-page.html" class="dropdown-item"> -->
+                  <!--   <i class="tim-icons icon-single-02"></i>Profile Page -->
+                  <!-- </a> -->
 
                 </div>
               </li>
@@ -118,12 +118,22 @@
       </nav>
       <!-- End Navbar -->
               {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert" id="msg">
                   {{ message }}
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
+                                              <script>
+
+    setTimeout(function() {
+                                                          console.log($('#msg'));
+        if ($('#msg').length > 0) {
+            $('#msg').remove();
+        }
+    }, 2000);
+                                                      console.log('Hello')
+                                                                            </script>
               {% endfor %}
 
                   {% if user.is_authenticated %}
@@ -135,6 +145,7 @@
                   {% endif %}
 
 
+          <div class="wrapper">
               {% block content %}
               {% endblock %}
 
@@ -157,12 +168,12 @@
           <div class="col-md-3">
             <ul class="nav">
               <li class="nav-item">
-                <a href="../index.html" class="nav-link">
+                <a href="/" class="nav-link">
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/register-page.html" class="nav-link">
+                <a href="/accounts/signup" class="nav-link">
                   Register
                 </a>
               </li>
@@ -171,12 +182,12 @@
           <div class="col-md-3">
             <ul class="nav">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/static/page/contact.html" class="nav-link">
                   Contact Us
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/static/page/about.html" class="nav-link">
                   About Us
                 </a>
               </li>
@@ -227,6 +238,12 @@
         }, 1000);
       }
     }
+
+    setTimeout(function() {
+        if ($('#msg').length > 0) {
+            $('#msg').remove();
+        }
+    }, 200);
   </script>
   </body>
 </html>

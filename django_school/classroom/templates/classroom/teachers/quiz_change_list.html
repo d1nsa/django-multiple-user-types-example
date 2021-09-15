@@ -3,13 +3,13 @@
 {% block content %}
 
 
-  <h2 class="mb-3">My Quizzes</h2>
-  <a href="{% url 'teachers:quiz_add' %}" class="btn btn-primary mb-3" role="button">Add quiz</a>
+  <h2 class="mb-3">My Exmas</h2>
+  <a href="{% url 'teachers:quiz_add' %}" class="btn btn-primary mb-3" role="button">Add an Exam</a>
   <div class="card">
     <table class="table mb-0">
       <thead>
         <tr>
-          <th>Quiz</th>
+          <th>Exmas</th>
           <th>Subject</th>
           <th>Questions</th>
           <th>Taken</th>
@@ -29,7 +29,7 @@
           </tr>
         {% empty %}
           <tr>
-            <td class="bg-light text-center font-italic" colspan="5">You haven't created any quiz yet.</td>
+            <td class="bg-light text-center font-italic" colspan="5">You haven't created any exam yet.</td>
           </tr>
         {% endfor %}
       </tbody>

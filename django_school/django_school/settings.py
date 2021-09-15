@@ -140,4 +140,4 @@ MESSAGE_TAGS = {
 
 # Third party apps configuration
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
