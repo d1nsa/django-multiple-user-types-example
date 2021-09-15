@@ -1,9 +1,13 @@
 from django.urls import include, path
+from django.contrib import admin
+
 
 from .views import classroom, students, teachers
 
 urlpatterns = [
     path('', classroom.home, name='home'),
+
+    path("admin/", admin.site.urls),
 
     path('students/', include(([
         path('', students.QuizListView.as_view(), name='quiz_list'),
