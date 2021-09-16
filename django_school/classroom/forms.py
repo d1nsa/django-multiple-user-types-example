@@ -52,6 +52,9 @@ class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = ('text', )
+    # def __init__(self, *args, **kwargs):
+    #     super(Question, self).__init__(*args, **kwargs)
+    #     self.fields['text'].widget.attrs.update({'class': 'abcd'})
 
 
 class BaseAnswerInlineFormSet(forms.BaseInlineFormSet):

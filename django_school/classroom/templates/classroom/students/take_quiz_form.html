@@ -12,8 +12,23 @@
   <div class="card">
     <div class="card-header">
     <div class="row">
-  <p class="">{{ question.text }}</p>
+  <p class="" style="color: white; padding-left: 30px; font-size: 30px;">{{ question.text }}</p>
 </div>
+<style>
+#id_answer {
+    list-style-type: none;
+    text-align: left;
+}
+
+#id_answer_0 {
+    text-align: left;
+}
+
+li {
+    align: left;
+    color: white;
+}
+</style>
   <form method="post" novalidate>
     {% csrf_token %}
     {{ form }}
